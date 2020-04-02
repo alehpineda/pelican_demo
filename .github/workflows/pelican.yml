@@ -29,8 +29,12 @@ jobs:
       uses: shimataro/ssh-key-action@v2
       with:
         key: ${{ secrets.SSH_KEY }}
-        name: id_rsa # optional
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
+    - name: Format SSH key and add to agent
+      run: |
+        chmod 600 ~/.ssh/id_rsa
+        echo "" >> ~/.ssh/id_rsa
+        echo "" >> ~/.ssh/known_hosts
     - name: Push local gh-pages to alehpineda.github.io
       run: |
         git push -f git@github.com:alehpineda/alehpineda.github.io.git gh-pages:master
