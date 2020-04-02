@@ -1,6 +1,6 @@
 name: Pelican Site
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
 
