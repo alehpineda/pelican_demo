@@ -34,7 +34,6 @@ jobs:
       run: |
         chmod 600 ~/.ssh/id_rsa
         echo "" >> ~/.ssh/id_rsa
-        echo "" >> ~/.ssh/known_hosts
     - name: Push local gh-pages to alehpineda.github.io
       run: |
         git push -f git@github.com:alehpineda/alehpineda.github.io.git gh-pages:master
