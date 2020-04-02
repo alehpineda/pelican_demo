@@ -25,3 +25,6 @@ jobs:
     - name: Push local gh-pages to remote
       run: |
         git push -f origin gh-pages
+    - name: Push local gh-pages to alehpineda.github.io
+      run: |
+        git push -f git@github.com:alehpineda/alehpineda.github.io.git gh-pages:master
