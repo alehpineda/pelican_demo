@@ -24,4 +24,4 @@ jobs:
         ghp-import output -b gh-pages
     - name: Push local gh-pages to remote
       run: |
-        git push origin gh-pages
+        git push -f origin gh-pages
